@@ -122,9 +122,13 @@ python -m streamlit run ui/app.py
 ### 🖥️ Dashboard Usage
 
 **Executive View:** Monitor real-time KPIs, including High-Risk alerts and Average Dwell Time.
+
 **Triage Feed**: Filter incidents by priority to focus on critical threats.
+
 **Investigate:** Expand any incident to view the Attack Timeline and AI Analysis.
+
 **Feedback Loop:** Use the "True Attack" or "False Positive" buttons to refine the system's scoring.
+
 **Reporting:** Generate and download a professional "Intelligence Report" for documentation.
 
 ---
