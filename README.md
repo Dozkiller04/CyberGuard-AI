@@ -56,41 +56,48 @@ mini_SOC_V.12/
 ├── ui/                     # Presentation Layer
 │   └── app.py              # Streamlit Dashboard
 └── requirements.txt        # Dependencies
+```
 
 ## 🚀 Getting Started
 
 ### 1. Installation
-Clone the repository and navigate to the project folder:
+**Clone the repository and navigate to the project folder:**
 ```bash
 git clone https://github.com/Dozkiller04/CyberGuard-AI.git
-cd CyberGuard-AI
+```
+**cd CyberGuard-AI**
 
-Install the required Python dependencies:
-code
-Bash
-2. Prepare Data
-Generate the simulated log dataset (includes Brute Force, Lateral Movement, and Anomaly scenarios):
-code
-Bash
+**Install the required Python dependencies:**
+```Bash
+pip install -r requirements.txt
+```
+### 2. Prepare Data
+**Generate the simulated log dataset (includes Brute Force, Lateral Movement, and Anomaly scenarios):**
+```Bash
 python data/generate_logs.py
-3. Launch Dashboard
-Start the SOC Assistant interface:
-code
-Bash
+```
+### 3. Launch Dashboard
+**Start the SOC Assistant interface:**
+```bash
 python -m streamlit run ui/app.py
-🖥️ Dashboard Usage
-Executive View: Monitor real-time KPIs, including High-Risk alerts and Average Dwell Time.
-Triage Feed: Filter incidents by priority to focus on critical threats.
-Investigate: Expand any incident to view the Attack Timeline and AI Analysis.
-Feedback Loop: Use the "True Attack" or "False Positive" buttons to refine the system's scoring.
-Reporting: Generate and download a professional "Intelligence Report" for documentation.
-📊 Recommended Screenshots (To be added)
-Executive Dashboard: Overview of metrics and threat landscape.
-Incident Deep-Dive: View of the timeline and MITRE mapping.
-Adaptive Feedback: Showing how risk scores change after analyst input.
-🔮 Future Scope
-Live Ingestion: Integration with live Syslog/Windows Event Forwarding.
-Database Backend: Transitioning from CSV to SQLite/PostgreSQL for persistent feedback storage.
-Advanced AI: Integrating local LLMs (Ollama/Llama 3) for deeper contextual narrative reporting.
-📄 License
+```
+
+### 🖥️ Dashboard Usage
+**Executive View:** Monitor real-time KPIs, including High-Risk alerts and Average Dwell Time.
+**Triage Feed**: Filter incidents by priority to focus on critical threats.
+**Investigate:** Expand any incident to view the Attack Timeline and AI Analysis.
+**Feedback Loop:** Use the "True Attack" or "False Positive" buttons to refine the system's scoring.
+**Reporting:** Generate and download a professional "Intelligence Report" for documentation.
+
+### 📊 Recommended Screenshots (To be added)
+**Executive Dashboard**: Overview of metrics and threat landscape.
+**Incident Deep-Dive:** View of the timeline and MITRE mapping.
+**Adaptive Feedback:** Showing how risk scores change after analyst input.
+
+### 🔮 Future Scope
+**Live Ingestion:** Integration with live Syslog/Windows Event Forwarding.
+**Database Backend:** Transitioning from CSV to SQLite/PostgreSQL for persistent feedback storage.
+**Advanced AI:** Integrating local LLMs (Ollama/Llama 3) for deeper contextual narrative reporting.
+
+### 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
