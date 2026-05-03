@@ -125,8 +125,29 @@ python -m streamlit run ui/app.py
 **Investigate:** Expand any incident to view the Attack Timeline and AI Analysis.
 **Feedback Loop:** Use the "True Attack" or "False Positive" buttons to refine the system's scoring.
 **Reporting:** Generate and download a professional "Intelligence Report" for documentation.
+---
 
-### 📊 Recommended Screenshots (To be added)
+## 📊 Project Gallery
+
+### 1. Executive Dashboard
+*Overview of security metrics and real-time threat landscape.*
+![Executive Dashboard](assets/dashboard.png)
+<img width="1836" height="861" alt="image" src="https://github.com/user-attachments/assets/e3bcf262-d6aa-4880-a002-3482940ecd1e" />
+
+
+### 2. Intelligent Attack Chain
+*A multi-stage incident correlated from raw logs and mapped to MITRE ATT&CK.*
+![Attack Chain](assets/incident.png)
+<img width="1845" height="848" alt="image" src="https://github.com/user-attachments/assets/637a6292-ecda-4694-a7de-e2678a0d2509" />
+
+
+### 3. Adaptive Feedback & XAI
+*The analyst feedback loop and Explainable AI summaries.*
+![Intelligence Reasoning](assets/feedback.png)
+<img width="1534" height="778" alt="image" src="https://github.com/user-attachments/assets/c3242980-3308-4fb5-8fbb-9d891cb9702f" />
+
+
+### 📊 Recommended 
 **Executive Dashboard**: Overview of metrics and threat landscape.
 **Incident Deep-Dive:** View of the timeline and MITRE mapping.
 **Adaptive Feedback:** Showing how risk scores change after analyst input.
