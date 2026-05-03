@@ -64,19 +64,23 @@ The system is built on 8 specialized intelligence engines:
 ## 📂 Project Structure
 ```text
 mini_SOC_V.12/
-├── backend/                # Intelligence & Logic Engines
-│   ├── log_reader.py       # Data parsing
-│   ├── detection_engine.py  # Pattern recognition
-│   ├── risk_engine.py       # Adaptive risk scoring
-│   ├── feedback_engine.py   # Analyst feedback memory
-│   ├── explanation_engine.py# Technical & Simple reasoning
-│   └── ...                 
-├── data/                   # Data Layer
-│   ├── generate_logs.py    # Simulated threat generator
-│   └── logs.csv            # Active log database
-├── ui/                     # Presentation Layer
-│   └── app.py              # Streamlit Dashboard
-└── requirements.txt        # Dependencies
+├── backend/                # 🧠 The Intelligence Layer
+│   ├── log_reader.py       # Universal Parser (CSV, JSON, XML, TXT)
+│   ├── correlation_engine.py# Event clustering & Session logic
+│   ├── detection_engine.py  # Attack chain pattern recognition
+│   ├── risk_engine.py       # Adaptive & Intel-driven scoring
+│   ├── threat_intel.py      # IP Reputation & Blacklist engine
+│   ├── explanation_engine.py# Technical & Simple Language XAI
+│   ├── feedback_engine.py   # Memory layer for analyst decisions
+│   └── investigation_engine.py # Response playbook generator
+├── data/                   # 📊 Data Layer
+│   ├── generate_logs.py    # Simulated threat dataset generator
+│   └── logs.csv            # Default active log database
+├── ui/                     # 🖥️ Presentation Layer
+│   └── app.py              # Advanced Streamlit SOC Dashboard
+├── requirements.txt        # Project dependencies
+├── .gitignore              # Ensures a clean repository
+└── main.py                 # Application entry point
 ```
 
 ## 🚀 Getting Started
