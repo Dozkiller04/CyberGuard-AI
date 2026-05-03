@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🛡️ CyberGuard AI: Mini SOC Assistant
 **AI-Assisted Threat Investigation, Correlation & Intelligence System**
 
@@ -35,9 +34,13 @@ This platform provides **Explainable AI (XAI)** insights, translating complex se
 ---
 ### 🌟 Advanced Features
 - **🚀 Universal Log Parser:** Seamlessly ingest **CSV, JSON, XML, Syslog, and Plain Text (.log/.txt)**. The system uses fuzzy logic to "self-heal" and map any log format to a security schema.
+  
 - **🧠 Adaptive Intelligence Loop:** Features a "Human-in-the-Loop" system. Marking incidents as "True Attack" or "False Positive" dynamically retrains the risk engine during the session.
+  
 - **🔍 Explainable AI (XAI):** Translates complex technical sequences into **Simple Language Mode** for management and **Technical Analysis** for senior analysts.
+  
 - **📡 Threat Intel Integration:** Built-in IP Reputation engine that checks sources against a global (simulated) blacklist of C2 servers and malicious actors.
+  
 - **📈 Executive Dashboard:** High-level KPIs including Correlated Incident counts, High-Risk distribution, and Attacker Dwell Time.
 
 ---
@@ -108,10 +111,12 @@ python data/generate_logs.py
 python -m streamlit run ui/app.py
 ```
 ### 4. Supported Formats
+
 **Simply drag and drop any of the following:**
 **Web Logs:** JSON, XML, CSV
 **Server Logs:** .txt, .log, .syslog
 **Network Logs:** Exported Netflow/Zeek CSVs
+
 ---
 
 ### 🖥️ Dashboard Usage
@@ -133,5 +138,5 @@ python -m streamlit run ui/app.py
 
 ### 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-=======
+
 
