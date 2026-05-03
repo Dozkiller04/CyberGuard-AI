@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛡️ CyberGuard AI: Mini SOC Assistant
 **AI-Assisted Threat Investigation, Correlation & Intelligence System**
 
@@ -132,3 +133,6 @@ python -m streamlit run ui/app.py
 
 ### 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+=======
+# ??? CyberGuard AI: Mini SOC Assistant
+>>>>>>> 6306f7c (docs: add readme and requirements)
