@@ -1,15 +1,25 @@
 from backend.feedback_engine import FeedbackEngine
 
+# Safety Import for ThreatIntel
+try:
+    from backend.threat_intel import ThreatIntel
+except ImportError:
+    # Fallback if the file is missing or broken
+    class ThreatIntel:
+        @classmethod
+        def check_ip(cls, ip): return False, "Intel Service Unavailable"
+
 class RiskEngine:
     @staticmethod
     def calculate_risk(incident_logs, pattern, incident_id=None):
-        """
-        Calculates risk score based on pattern and adjusts it 
-        based on Analyst Feedback.
-        """
         score = 0
+        confidence = 85
         
-        # Base weights for different attack patterns
+        # 1. Threat Intel Check
+        source_ip = incident_logs.iloc[0]['ip']
+        is_blacklisted, intel_reason = ThreatIntel.check_ip(source_ip)
+        
+        # 2. Base weights
         pattern_weights = {
             "Potential Lateral Movement": 90,
             "Account Compromise (Brute Force Success)": 80,
@@ -18,16 +28,18 @@ class RiskEngine:
             "General Suspicious Activity": 20
         }
         
-        # 1. Get base score from pattern
         score = pattern_weights.get(pattern, 15)
-        confidence = 85 # Initial confidence level
-        
-        # 2. ADAPTIVE LOGIC: Check if Analyst has provided feedback
-        # This is where the 3rd argument (incident_id) is used
+
+        # 3. Apply Intel Boost
+        if is_blacklisted:
+            score = 100
+            confidence = 100
+
+        # 4. Feedback Adjustment
         if incident_id is not None:
             score, confidence = FeedbackEngine.adjust_by_feedback(incident_id, score, confidence)
         
-        # 3. Categorize Risk
+        # Determine Level
         if score >= 75:
             return "HIGH", int(score), int(confidence)
         elif score >= 40:

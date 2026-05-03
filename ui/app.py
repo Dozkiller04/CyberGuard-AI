@@ -15,6 +15,8 @@ try:
     from backend.detection_engine import DetectionEngine
     from backend.risk_engine import RiskEngine
     from backend.investigation_engine import InvestigationEngine
+    from backend.explanation_engine import ExplanationEngine
+    from backend.feedback_engine import FeedbackEngine
 except ImportError as e:
     st.error(f"❌ Backend Import Error: {e}")
 
@@ -39,7 +41,13 @@ st.markdown("---")
 
 # --- SIDEBAR & DATA LOADING ---
 st.sidebar.header("📥 Ingestion Layer")
-uploaded_file = st.sidebar.file_uploader("Upload Raw Logs (CSV)", type="csv")
+# In ui/app.py sidebar section:
+# Around line 40 in ui/app.py
+# Around line 40 in ui/app.py
+uploaded_file = st.sidebar.file_uploader(
+    "Upload Any Log File (CSV, JSON, XML, LOG, TXT...)", 
+    type=None # Allows all extensions
+)
 
 if uploaded_file is None:
     if os.path.exists("data/logs.csv"):
