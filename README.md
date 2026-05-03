@@ -5,6 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
+![Intelligence](https://img.shields.io/badge/Logic-Heuristic_AI-purple)
 
 ## 📖 Project Overview
 CyberGuard AI is an intelligent Security Operations Center (SOC) assistant designed to combat **Alert Fatigue**. Instead of overwhelming analysts with thousands of isolated logs, the system uses a custom **Heuristic Correlation Engine** to transform raw data into structured, multi-stage **Attack Chains**.
@@ -31,11 +32,31 @@ This platform provides **Explainable AI (XAI)** insights, translating complex se
 - **MITRE ATT&CK Integration:** Automatically maps detected behaviors to official techniques (e.g., T1110 - Brute Force, T1021 - Lateral Movement).
 
 ---
+### 🌟 Advanced Features
+- **🚀 Universal Log Parser:** Seamlessly ingest **CSV, JSON, XML, Syslog, and Plain Text (.log/.txt)**. The system uses fuzzy logic to "self-heal" and map any log format to a security schema.
+- **🧠 Adaptive Intelligence Loop:** Features a "Human-in-the-Loop" system. Marking incidents as "True Attack" or "False Positive" dynamically retrains the risk engine during the session.
+- **🔍 Explainable AI (XAI):** Translates complex technical sequences into **Simple Language Mode** for management and **Technical Analysis** for senior analysts.
+- **📡 Threat Intel Integration:** Built-in IP Reputation engine that checks sources against a global (simulated) blacklist of C2 servers and malicious actors.
+- **📈 Executive Dashboard:** High-level KPIs including Correlated Incident counts, High-Risk distribution, and Attacker Dwell Time.
+
+---
+## 🏗️ Modular Architecture
+The system is built on 8 specialized intelligence engines:
+1. **Log Reader:** Universal parser for all file extensions.
+2. **Correlation Engine:** Temporal and entity-based event clustering.
+3. **Detection Engine:** Identifies Brute Force, Lateral Movement, and Exfiltration.
+4. **Risk Engine:** Adaptive 0-100 scoring based on patterns + Threat Intel + Feedback.
+5. **Threat Intel:** Reputation-based IP analysis.
+6. **Explanation Engine:** Multi-mode narrative generator.
+7. **Feedback Engine:** Session-based memory for analyst decisions.
+8. **Investigation Engine:** Automated response playbook generation.
+
+---
 
 ## 🛠️ Tech Stack
-- **Backend:** Python 3.12 (Modular Engine Architecture)
-- **Processing:** Pandas (High-speed log correlation)
-- **Frontend:** Streamlit (Reactive SOC Dashboard)
+- **Backend:** Python 3.12 (Modular Architecture)
+- **Processing:** Pandas & Regex (High-performance data manipulation)
+- **Frontend:** Streamlit (Reactive Dashboard)
 - **Logic:** Heuristic State-Machines & Rule-based Intelligence
 
 ---
@@ -81,6 +102,12 @@ python data/generate_logs.py
 ```bash
 python -m streamlit run ui/app.py
 ```
+### 4. Supported Formats
+**Simply drag and drop any of the following:**
+**Web Logs:** JSON, XML, CSV
+**Server Logs:** .txt, .log, .syslog
+**Network Logs:** Exported Netflow/Zeek CSVs
+---
 
 ### 🖥️ Dashboard Usage
 **Executive View:** Monitor real-time KPIs, including High-Risk alerts and Average Dwell Time.
